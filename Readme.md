@@ -1,4 +1,4 @@
-# Computer Science - UNI - Lima - Perú
+# Computer Science - UCSP - Arequipa - Perú
 
 Cursos y tareas de estudios de maestria en Ciencia de la Computacion.
 
