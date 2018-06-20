@@ -6,7 +6,11 @@
 #include <time.h>
 #include <omp.h>
 
+// g++ -std=c++1z quick_sort.cpp -fopenmp
+
 using namespace std;
+
+string NAMEFILE = "data_generated_by_script.txt";
 
 template<class RandomAccessIterator>
 long quickPartition(RandomAccessIterator first, long low, long high){
@@ -111,7 +115,7 @@ vector<double> generate_data(int size){
 }
 
 int getNumberData(){
-  ifstream myfile("data.txt");
+  ifstream myfile(NAMEFILE);
   string line;
   int i = 0;
   if (myfile.is_open()){
@@ -127,7 +131,7 @@ vector<double> readFile(){
   string line;
   vector<double> arr;
   double var;
-  ifstream myfile("data.txt");
+  ifstream myfile(NAMEFILE);
   int i = 0;
   if (myfile.is_open()){
     //while ( getline (myfile,line) ){
